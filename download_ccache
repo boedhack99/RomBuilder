@@ -1,10 +1,10 @@
 #!/bin/bash
 
-url=https://ghostmirror.hitesh920.workers.dev/0://fludy.tar.gz
+url=https://drive.fourninesixx.workers.dev/GdriveXbot/qwer.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50
 echo "dl done"
-time tar xf fludy.tar.gz
+time tar xf qwer.tar.gz
 echo "unzip done"
-find fludy.tar.gz -delete
+find qwer.tar.gz -delete
