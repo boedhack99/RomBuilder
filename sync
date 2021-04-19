@@ -17,7 +17,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 pwd
 ls
 
-git clone --depth=1 https://github.com/fourninesix/device_xiaomi_lava -b lineage-18.1 device/xiaomi/lava
+git clone --depth=1 https://github.com/fourninesix/device_xiaomi_lava -b arrow device/xiaomi/lava
 git clone --depth=1 https://github.com/Redmi-MT6768/android_vendor_xiaomi_lava -b eleven vendor/xiaomi/lava
 git clone https://github.com/henloscape/memecam vendor/xiaomi/miuicamera
 bash device/xiaomi/lava/vendorsetup.sh
