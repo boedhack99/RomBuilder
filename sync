@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install wget
-MANIFEST=https://github.com/PixelBlaster-OS/manifest
-BRANCH=eleven
+MANIFEST=https://github.com/PixelExperience/manifest
+BRANCH=eleven-plus
 
 mkdir -p /tmp/rom
 cd /tmp/rom
@@ -17,8 +17,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 pwd
 ls
 
-git clone --depth=1 https://github.com/fourninesix/device_xiaomi_lava -b pixelblaster device/xiaomi/lava
+git clone --depth=1 https://github.com/fourninesix/device_xiaomi_lava -b eleven device/xiaomi/lava
 git clone --depth=1 https://github.com/Redmi-MT6768/android_vendor_xiaomi_lava -b eleven vendor/xiaomi/lava
-git clone https://github.com/henloscape/memecam vendor/xiaomi/miuicamera
+git clone https://github.com/sarveshrulz/android_vendor_aeonax_ANXCamera -b v185 vendor/aeonax/ANXCamera
 bash device/xiaomi/lava/vendorsetup.sh
 
