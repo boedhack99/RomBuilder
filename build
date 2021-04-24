@@ -1,9 +1,10 @@
 #!/bin/bash
 cd /tmp/rom
 source build/envsetup.sh
-lunch derp_lava-userdebug
+lunch aosp_lava-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
+export NEZUKO_MAINTAINER=DemiFiend
 cd /tmp/rom
 export CCACHE_DIR=/tmp/ccache  ##use additional flags if you need(optional)
 export CCACHE_EXEC=$(which ccache)
@@ -25,7 +26,7 @@ make_metalava(){
 }
 
 make_rom(){
-	mka derp
+	make bacon -j16
 	zip=$(up out/target/product/lava/*zip)
 	echo " "
 	echo "$zip"
