@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /tmp/rom
 source build/envsetup.sh
-lunch fluid_lava-userdebug
+lunch spark_lava-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
 cd /tmp/rom
@@ -25,7 +25,7 @@ make_metalava(){
 }
 
 make_rom(){
-	mka bacon
+	mka spark -j$(nproc --all)
 	zip=$(up out/target/product/lava/*zip)
 	echo " "
 	echo "$zip"
